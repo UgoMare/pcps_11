@@ -1,12 +1,33 @@
 @import "bootstrap";
 $blue_pcps: #0c2f72;
+$navy_blue_pcps: #002d73;
 $orange_pcps: #ff7f2f;
+$grey_pcps: #bfcadc;
 
 body {
-  font-family: 'Poppins', sans-serif;
+  font-family: 'SF-Pro-Display', Roboto, Sans-Serif;
+  position: relative;
+}
+
+.btn-pcps {
+  padding: 12px 24px;
+  color: #fff;
+  background-color: $blue_pcps;
+  border-radius: 2px;
+  margin: 10px;
+  border: 1px solid $blue_pcps;
+  &:hover {
+    background-color: $orange_pcps;
+    color: $blue_pcps;
+  }
+}
+
+.inline-block {
+  display: inline-block;
 }
 
 .navbar-pcps {
+  font-family: 'Poppins', sans-serif;
   background-color: $orange_pcps;
   color: #fff;
   border-radius: 0px;
@@ -24,7 +45,7 @@ body {
 
   .navbar-nav {
     & > li > a {
-      border-radius: 4px;
+      border-radius: 2px;
       text-shadow: none;
       text-transform: uppercase;
       font-weight: 600;
@@ -72,7 +93,6 @@ body {
 
 .footer {
   padding-top: 26px;
-  font-family: 'SF-Pro-Display', Roboto, Sans-Serif;
   background-color: $blue_pcps;
   font-weight: 100;
   color: #fff;
@@ -94,3 +114,61 @@ body {
 #home-carousel {
   margin-top: 75px;
 }
+
+.container.content {
+  padding-top: 30px;
+  padding-bottom: 30px;
+
+  h2 {
+    font-weight: 100;
+    font-size: 24px;
+  }
+  p.descr {
+    font-size: 16px;
+    font-weight: 100;
+  }
+  .ico p {
+    font-size: 16px;
+    text-align: center;
+  }
+  .ico img {
+    height: 80px;
+  }
+}
+
+.antenne {
+  background-color: #fff;
+  h2, p {
+    color: $blue_pcps;
+  }
+  .row {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+  img {
+    height: 120px;
+  }
+}
+
+.missions {
+  background-color: $orange_pcps;
+  h2, p {
+    color: #fff;
+  }
+}
+
+.equipe {
+  background-color: $blue_pcps;
+  h2, p {
+    color: #fff;
+  }
+}
+
+.moyens {
+  background-color: $grey_pcps;
+  h2, p {
+    color: $navy_blue_pcps;
+  }
+}
+

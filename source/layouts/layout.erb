@@ -40,5 +40,16 @@
     <%= partial 'nav' %>
     <%= yield %>
     <%= partial 'footer' %>
+
+    <script>
+      $(".scroll_to").click(function(e) {
+        e.preventDefault();
+        var target = $(this).attr('href');
+        console.log(target);
+          $('html, body').animate({
+              scrollTop: $(target).offset().top - 75
+          }, 1000);
+      });
+    </script>
   </body>
 </html>
