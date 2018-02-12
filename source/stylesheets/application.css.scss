@@ -1,0 +1,65 @@
+@import "bootstrap";
+
+body {
+  font-family: 'Poppins', sans-serif;
+}
+
+.navbar-pcps {
+  background-color: #ff7f2f;
+  color: #fff;
+  border-radius: 0px;
+  min-height: 74px;
+}
+
+.navbar-pcps a {
+  color: #fff;
+}
+
+.navbar-pcps .navbar-toggle.collapsed {
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.navbar-pcps .navbar-toggle .icon-bar {
+  background-color: #fff;
+}
+
+.navbar-pcps .navbar-nav {
+  padding-top: 21px;
+  padding-bottom: 21px;
+}
+
+.navbar-pcps .navbar-nav > li > a {
+  padding-top: 6px;
+  padding-bottom: 6px;
+  border-radius: 4px;
+  text-shadow: none;
+  text-transform: uppercase;
+  font-weight: 600;
+  letter-spacing: 0.05em;
+  font-size: 12px;
+}
+
+.navbar-pcps .navbar-nav > li > a:hover {
+  background-color: #0c2f72;
+}
+
+.navbar-pcps .navbar-nav > li > a.active {
+  background-color: #000;
+  color: #ff7f2f;
+}
+
+.navbar-pcps .navbar-nav.navbar-left {
+  margin-left: 30px;
+}
+
+.navbar-pcps .navbar-brand {
+  padding: 0px;
+  text-shadow: none;
+  height: 74px;
+}
+
+.navbar-pcps .navbar-brand img {
+  height: 68px;
+  margin: 3px 0px;
+}
