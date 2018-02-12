@@ -1,11 +1,13 @@
 @import "bootstrap";
+$blue_pcps: #0c2f72;
+$orange_pcps: #ff7f2f;
 
 body {
   font-family: 'Poppins', sans-serif;
 }
 
 .navbar-pcps {
-  background-color: #ff7f2f;
+  background-color: $orange_pcps;
   color: #fff;
   border-radius: 0px;
   min-height: 74px;
@@ -38,10 +40,10 @@ body {
         font-size: 12px;
         .active, &:active, &:focus {
           background-color: #fff;
-          color: #ff7f2f;
+          color: $orange_pcps;
         }
         &:hover {
-          background-color: #0c2f72;
+          background-color: $blue_pcps;
         }
       }
     }
@@ -52,7 +54,7 @@ body {
         font-size: 20px;
         width: 50px;
         text-align: center;
-        background-color: #0c2f72;
+        background-color: $blue_pcps;
         margin: 2px;
       }
     }
@@ -68,7 +70,22 @@ body {
   }
 }
 
-
 .footer {
+  padding-top: 26px;
+  font-family: 'SF-Pro-Display', Roboto, Sans-Serif;
+  background-color: $blue_pcps;
+  font-weight: 100;
+  color: #fff;
+  letter-spacing: 0.05em;
 
+  .link-list {
+    margin-top: 20px;
+    .socials-ico {
+      a {
+        color: #fff;
+        font-size: 18px;
+        margin: 0 4px;
+      }
+    }
+  }
 }
