@@ -9,57 +9,66 @@ body {
   color: #fff;
   border-radius: 0px;
   min-height: 74px;
+  a {
+    color: #fff;
+  }
+  .navbar-toggle.collapsed {
+    margin-top: 20px;
+    margin-bottom: 20px;
+  }
+  .navbar-toggle .icon-bar {
+    background-color: #fff;
+  }
+
+  .navbar-nav {
+    & > li > a {
+      border-radius: 4px;
+      text-shadow: none;
+      text-transform: uppercase;
+      font-weight: 600;
+      letter-spacing: 0.05em;
+    }
+    &.navbar-left {
+      margin-left: 30px;
+      padding-top: 21px;
+      padding-bottom: 21px;
+      & > li > a {
+        padding-top: 6px;
+        padding-bottom: 6px;
+        font-size: 12px;
+        .active, &:active, &:focus {
+          background-color: #fff;
+          color: #ff7f2f;
+        }
+        &:hover {
+          background-color: #0c2f72;
+        }
+      }
+    }
+    &.navbar-right {
+      margin-top: 10px;
+      margin-bottom: 10px;
+      & > li > a {
+        font-size: 20px;
+        width: 50px;
+        text-align: center;
+        background-color: #0c2f72;
+        margin: 2px;
+      }
+    }
+  }
+  .navbar-brand {
+    padding: 0px;
+    text-shadow: none;
+    height: 74px;
+    img {
+      height: 68px;
+      margin: 3px 0px;
+    }
+  }
 }
 
-.navbar-pcps a {
-  color: #fff;
-}
 
-.navbar-pcps .navbar-toggle.collapsed {
-  margin-top: 20px;
-  margin-bottom: 20px;
-}
+.footer {
 
-.navbar-pcps .navbar-toggle .icon-bar {
-  background-color: #fff;
-}
-
-.navbar-pcps .navbar-nav {
-  padding-top: 21px;
-  padding-bottom: 21px;
-}
-
-.navbar-pcps .navbar-nav > li > a {
-  padding-top: 6px;
-  padding-bottom: 6px;
-  border-radius: 4px;
-  text-shadow: none;
-  text-transform: uppercase;
-  font-weight: 600;
-  letter-spacing: 0.05em;
-  font-size: 12px;
-}
-
-.navbar-pcps .navbar-nav > li > a:hover {
-  background-color: #0c2f72;
-}
-
-.navbar-pcps .navbar-nav > li > a.active {
-  background-color: #000;
-  color: #ff7f2f;
-}
-
-.navbar-pcps .navbar-nav.navbar-left {
-  margin-left: 30px;
-}
-
-.navbar-pcps .navbar-brand {
-  padding: 0px;
-  text-shadow: none;
-  height: 74px;
-}
-
-.navbar-pcps .navbar-brand img {
-  height: 68px;
-  margin: 3px 0px;
 }
