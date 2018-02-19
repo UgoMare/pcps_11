@@ -113,6 +113,13 @@ body {
 
 #home-carousel {
   margin-top: 75px;
+  .item {
+    height: 540px;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-attachment: scroll;
+    background-size: cover;
+  }
 }
 
 .container.content {
@@ -172,3 +179,10 @@ body {
   }
 }
 
+.image {
+  height: 540px;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-attachment: scroll;
+  background-size: cover;
+}
