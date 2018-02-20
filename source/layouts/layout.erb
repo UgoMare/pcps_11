@@ -34,22 +34,66 @@
   <%= stylesheet_link_tag "https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" %>
   <%= stylesheet_link_tag "application" %>
   <%= javascript_include_tag "application" %>
-  </head>
+</head>
 
-  <body>
-    <%= partial 'nav' %>
-    <%= yield %>
-    <%= partial 'footer' %>
+<body>
+  <%= partial 'nav' %>
+  <%= yield %>
+  <%= partial 'footer' %>
 
-    <script>
-      $(".scroll_to").click(function(e) {
-        e.preventDefault();
-        var target = $(this).attr('href');
-        console.log(target);
-          $('html, body').animate({
-              scrollTop: $(target).offset().top - 75
-          }, 1000);
+  <script>
+    $(".scroll_to").click(function(e) {
+      e.preventDefault();
+      var target = $(this).attr('href');
+      console.log(target);
+      $('html, body').animate({
+        scrollTop: $(target).offset().top - 75
+      }, 1000);
+    });
+  </script>
+
+  <script>
+    function initMap() {
+
+      var styledMapType = new google.maps.StyledMapType(
+        [
+        {"featureType": "administrative","elementType": "labels.text.fill","stylers": [{"color": "#444444"}]},
+        {"featureType": "landscape","elementType": "all","stylers": [{"color": "#f2f2f2"}]},
+        {"featureType": "poi","elementType": "all","stylers": [{"visibility": "off"}]},
+        {"featureType": "road","elementType": "all","stylers": [{"saturation": -100},{"lightness": 45}]},
+        {"featureType": "water","elementType": "all","stylers": [{"color": "#46bcec"},{"visibility": "on"}]},
+        {"featureType": "all","elementType": "all","stylers": [{"hue": "#0c2f72"},{"saturation" : 100}]},
+        {"featureType": "road.arterial","elementType": "labels.icon","stylers": [{"visibility": "off"}]},
+        {"featureType": "transit","elementType": "all","stylers": [{"visibility": "off"}]},
+        ]
+        );
+
+      var pcps_11 = { lat: 48.8472235, lng: 2.365718700000002 };
+      var paris = { lat: 48.85661400000001, lng: 2.3522219000000177 };
+      var map = new google.maps.Map(document.getElementById('map'), {
+        zoom: 13,
+        center: paris,
+        mapTypeControl: false,
+        streetViewControl: false
       });
-    </script>
-  </body>
+      map.mapTypes.set('styled_map', styledMapType);
+      map.setMapTypeId('styled_map');
+
+      var transitLayer = new google.maps.TransitLayer();
+      transitLayer.setMap(map);
+
+      var marker = new google.maps.Marker({
+        position: pcps_11,
+        map: map,
+        icon: {
+          url: '<%= image_path 'map-marker.png' %>',
+          scaledSize: new google.maps.Size(35, 50),
+        }
+      });
+    }
+  </script>
+  <script async defer
+  src="https://maps.googleapis.com/maps/api/js?callback=initMap">
+</script>
+</body>
 </html>
