@@ -28,7 +28,7 @@ body {
 
 .navbar-pcps {
   font-family: 'Poppins', sans-serif;
-  background-color: $orange_pcps;
+  background-color: $blue_pcps;
   color: #fff;
   border-radius: 0px;
   min-height: 74px;
@@ -61,10 +61,10 @@ body {
         font-size: 12px;
         .active, &:active, &:focus {
           background-color: #fff;
-          color: $orange_pcps;
+          color: $blue_pcps;
         }
         &:hover {
-          background-color: $blue_pcps;
+          background-color: $orange_pcps;
         }
       }
     }
@@ -75,7 +75,7 @@ body {
         font-size: 20px;
         width: 50px;
         text-align: center;
-        background-color: $blue_pcps;
+        background-color: $orange_pcps;
         margin: 2px;
       }
     }
@@ -93,7 +93,7 @@ body {
 
 .footer {
   padding-top: 26px;
-  background-color: $blue_pcps;
+  background-color: $orange_pcps;
   font-weight: 100;
   color: #fff;
   letter-spacing: 0.05em;
