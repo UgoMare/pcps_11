@@ -78,6 +78,9 @@ body {
         background-color: $orange_pcps;
         margin: 2px;
       }
+      li {
+        display: inline-block;
+      }
     }
   }
   .navbar-brand {
