@@ -62,7 +62,7 @@
         {"featureType": "poi","elementType": "all","stylers": [{"visibility": "off"}]},
         {"featureType": "road","elementType": "all","stylers": [{"saturation": -100},{"lightness": 45}]},
         {"featureType": "water","elementType": "all","stylers": [{"color": "#46bcec"},{"visibility": "on"}]},
-        {"featureType": "all","elementType": "all","stylers": [{"hue": "#0c2f72"},{"saturation" : 100}]},
+        // {"featureType": "all","elementType": "all","stylers": [{"hue": "#0c2f72"},{"saturation" : 100}]},
         {"featureType": "road.arterial","elementType": "labels.icon","stylers": [{"visibility": "off"}]},
         {"featureType": "transit","elementType": "all","stylers": [{"visibility": "off"}]},
         ]
@@ -85,11 +85,18 @@
       var marker = new google.maps.Marker({
         position: pcps_11,
         map: map,
+        title: "Protection Civile Paris 11",
         icon: {
           url: '<%= image_path 'map-marker.png' %>',
           scaledSize: new google.maps.Size(35, 50),
         }
       });
+
+      google.maps.event.addListener(marker, 'click', function() {
+        window.open('https://www.google.fr/maps/dir//1+Pont+Morland,+Paris/')
+      });
+
+
     }
   </script>
   <script async defer
