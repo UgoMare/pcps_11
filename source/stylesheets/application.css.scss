@@ -95,11 +95,17 @@ body {
 }
 
 .footer {
+  a {
+    color: #fff;
+  }
   padding-top: 26px;
-  background-color: $orange_pcps;
+  background-color: $blue_pcps;
   font-weight: 100;
   color: #fff;
   letter-spacing: 0.05em;
+  .metro {
+    width: 20px;
+  }
 
   .link-list {
     margin-top: 20px;
